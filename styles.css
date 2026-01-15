@@ -1,3 +1,65 @@
-﻿h1 {
-    color: green;
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
+    opacity: .9;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 50px;
+    width: 100%;
+}
+
+.home-link img {
+    width: 35px;
+}
+
+.home-link {
+    display: flex;
+    align-items: center;
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    gap: 5px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+}
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: color .3s;
+        text-transform: uppercase;
+    }
+
+        .nav-links a:hover {
+            color: red;
+        }
+
+footer {
+    padding: 60px;
+    background-color: grey;
+}
+
+.card {
+    border: solid 2px black;
+    width: 100px;
 }
