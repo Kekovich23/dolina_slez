@@ -92,14 +92,22 @@ nav {
 }
 
 .start-section a {
+    margin-top: 30px;
+}
+
+.btn {
     color: white;
     text-decoration: none;
     background-color: red;
     padding: 10px 25px;
     border-radius: 20px;
     font-weight: bold;
-    margin-top: 30px;
+    transition: color .3s;
 }
+
+    .btn:hover {
+        color: gold;
+    }
 
 main h2 {
     text-align: center;
@@ -107,10 +115,11 @@ main h2 {
     margin-bottom: 60px;
 }
 
-#courses {
-    padding: 0px 10px;
+.section {
+    padding: 0px 30px;
     margin: 0 auto;
     max-width: 1100px;
+    margin-bottom: 50px
 }
 
 .grid {
@@ -141,6 +150,39 @@ main h2 {
             margin-top: 20px;
             color: black;
         }
+
+.form {
+    border: solid 4px black;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px grey;
+    padding: 60px 40px;
+}
+
+    .form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form input {
+        padding: 20px;
+        max-width: 500px;
+        width: 100%;
+        border: solid 2px grey;
+        border-radius: 20px;
+        transition: border-color .3s;
+        outline: none;
+    }
+
+        .form input:focus {
+            border-color: gold;
+        }
+
+    .form button {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
 
 /*#endregion*/
 footer {
