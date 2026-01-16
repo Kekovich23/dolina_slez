@@ -38,7 +38,6 @@ header {
     width: 100%;
     background-color: black;
     z-index: 1000;
-    opacity: .9;
 }
 
 nav {
@@ -46,8 +45,9 @@ nav {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    padding: 15px 50px;
+    padding: 15px 50px 13px 50px;
     width: 100%;
+    border-bottom: solid 2px gold;
 }
 
 .home-link img {
@@ -68,6 +68,7 @@ nav {
     display: flex;
     justify-content: end;
     gap: 25px;
+    background-color: black;
 }
 
     .nav-links a {
@@ -80,6 +81,64 @@ nav {
         .nav-links a:hover {
             color: red;
         }
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    height: 100%;
+}
+
+    .burger-menu img {
+        filter: brightness(0) saturate(100%) invert(79%) sepia(54%) saturate(1300%) hue-rotate(358deg) brightness(102%) contrast(107%);
+    }
+
+    .burger-menu:focus img {
+        filter: brightness(0) saturate(100%) invert(18%) sepia(88%) saturate(4645%) hue-rotate(357deg) brightness(104%) contrast(132%);
+    }
+
+@media (max-width: 580px) {
+    nav {
+        padding: 15px 25px 13px 25px;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .main-nav-links {
+        height: 100vh;
+        display: flex;
+        position: absolute;
+        top: 65px;
+        right: -100%;
+        transition: 0.5s ease;
+        width: 100%;
+    }
+
+    #empty-nav-links {
+        width: 30%;
+    }
+
+    .nav-links {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-left: solid 2px gold;
+    }
+
+    .main-nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+}
 /*#endregion*/
 
 /*#region main*/

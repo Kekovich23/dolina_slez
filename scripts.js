@@ -1,6 +1,19 @@
 ﻿const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const selectedCardKey = 'selectedCard';
 
+document.querySelector('.burger-menu').addEventListener('click', function (e) {
+    let navLinks = document.querySelector('.main-nav-links');
+    if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+    } else {
+        navLinks.classList.add('active');
+    }
+});
+
+document.querySelectorAll('nav a, #empty-nav-links').forEach(el => el.addEventListener('click', function (e) {
+    document.querySelector('.main-nav-links').classList.remove('active');
+}));
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
