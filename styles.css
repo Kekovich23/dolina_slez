@@ -117,6 +117,7 @@ nav {
     border-radius: 20px;
     font-weight: bold;
     transition: color .3s;
+    cursor: pointer;
 }
 
     .btn:hover {
@@ -130,7 +131,7 @@ main h2 {
 }
 
 .section {
-    padding: 65px 30px 0 65px;
+    padding: 65px 30px 0px 30px;
     margin: 0 auto;
     max-width: 1100px;
 }
@@ -198,6 +199,8 @@ main h2 {
     }
 
 /*#endregion*/
+
+/*#region footer*/
 footer {
     margin-top: 65px;
     padding: 20px;
@@ -218,3 +221,48 @@ footer {
         footer a:hover {
             color: red;
         }
+/*#endregion*/
+
+/*#region modal*/
+.modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #0000007a;
+    z-index: 1000;
+}
+
+    .modal > div {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+        .modal > div > div {
+            border: solid 4px black;
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            position: relative;
+        }
+
+            .modal > div > div > div {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+/*#endregion*/

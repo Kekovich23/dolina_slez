@@ -61,8 +61,8 @@
             <div class="form">
                 <h2>Записаться на Курс</h2>
                 <form>
-                    <input type="text" placeholder="Ваше имя" />
-                    <input type="text" placeholder="Email для инструкций" />
+                    <input type="text" placeholder="Ваше имя" required id="name" />
+                    <input type="text" placeholder="Email для инструкций" required id="email" />
                     <button type="submit" class="btn">Получить Знания</button>
                 </form>
             </div>
@@ -74,5 +74,19 @@
         <div>&copy; 2026 ООО "Долина Слёз"</div>
         <div>Республика Кипр, Красный Проспект, коралл 3, спросить Талипа</div>
     </footer>
+
+    <div class="modal" style="display:none;">
+        <div>
+            <div>
+                <button class="close" type="button">x</button>
+                <div>
+                    <h2>Спасибо, <span id="input-name">Олег</span>!</h2>
+                    <p id="valid-email" style="display:none;">Мы отправили запрос на добавление Вашей почты в базу спам-рассылок.</p>
+                    <p id="invalid-email" style="display:none;">Хоть Вы и ввели белеберду вместо почты, мы всё равно рады, что Вы проверили работоспособность этой формы.</p>
+                    <div style="text-align:center"><button class="btn" type="button">Ура!</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
