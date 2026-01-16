@@ -68,3 +68,21 @@ document.querySelector('form').addEventListener('submit', function (e) {
     document.querySelector('#main-form').style.display = 'none';
     document.querySelector('#done-message').style.display = 'block';
 });
+
+function createTears() {
+    const tear = document.createElement('img');
+    tear.classList.add('tear-drop');
+    tear.src = 'images/tear.svg';
+    tear.style.left = Math.random() * 100 + 'vw';
+    tear.style.top = '-50px';
+    tear.style.width = Math.random() * 20 + 20 + 'px';
+    tear.style.animationDuration = Math.random() * 3 + 2 + 's';
+    tear.style.zIndex = Math.random() > 0.5 ? 3 : 1;
+    document.querySelector('.start-section').appendChild(tear);
+
+    setTimeout(() => {
+        tear.remove();
+    }, 5000);
+}
+
+setInterval(createTears, 200);

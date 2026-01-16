@@ -5,6 +5,18 @@
     scroll-behavior: smooth;
 }
 
+.tear-drop {
+    position: absolute;
+    opacity: 0.4;
+    animation: fall linear 1;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(calc(100vh + 50px));
+    }
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -92,6 +104,8 @@ nav {
     width: 100%;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    position: relative;
 }
 
     .start-section > div {
@@ -103,6 +117,8 @@ nav {
         text-align: center;
         gap: 10px;
         padding: 0 10px;
+        z-index: 2;
+        position: relative;
     }
 
     .start-section h1 {
@@ -246,6 +262,7 @@ footer {
     gap: 15px;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
     footer a {
