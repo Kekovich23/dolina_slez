@@ -1,6 +1,21 @@
 ﻿const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const selectedCardKey = 'selectedCard';
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            setInterval(() => {
+                entry.target.classList.remove('reveal');
+                entry.target.classList.remove('active')
+            }, 1000);
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.reveal');
+hiddenElements.forEach((el) => observer.observe(el));
+
 const modal = document.querySelector('.modal');
 modal.querySelectorAll('button').forEach(el => el.addEventListener('click', (e) => {
     modal.style.display = 'none';
