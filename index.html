@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="home-link"><img src="images/tear.svg" alt="tear" />ДОЛИНА СЛЁЗ</a>
+            <a href="index.html#" class="home-link"><img src="images/tear.svg" alt="tear" />ДОЛИНА СЛЁЗ</a>
             <div class="nav-links">
                 <a href="index.html#courses">Курсы</a>
                 <a href="index.html#join">Записаться на Курс</a>
@@ -33,38 +33,95 @@
         <div id="courses" class="section">
             <h2>Курсы</h2>
             <div class="grid">
-                <div class="card">
+                <div class="card" data-id="1">
                     <div>
-                        <h3>Интенсив «Лариса»</h3>
-                        <p>Базовый курс по ретро-сделкам. Изучаем теорию "удаленного управления сознанием через Wi-Fi утюг".</p>
+                        <h3>«Призрак Оперы»</h3>
+                        <p>Обучаем продавать квартиры, в которых «временно» живут 14 прописанных оперных певцов, отказывающихся замолкать.</p>
                     </div>
-                    <span>125 000 ₽</span>
+                    <span>88 888 ₽</span>
                 </div>
-                <div class="card">
+                <div class="card" data-id="2">
                     <div>
-                        <h3>VIP: «Звездный Пленник»</h3>
-                        <p>Продвинутый уровень. Как привлечь федеральные СМИ для освещения вашей "трагедии" и вернуть дом в Хамовниках.</p>
+                        <h3>«Юридический Туман»</h3>
+                        <p>Мастер-класс по печати договоров на сахарной бумаге: исчезают через 2 часа после подписания вместе с задатком.</p>
                     </div>
-                    <span>450 000 ₽</span>
+                    <span>123 456 ₽</span>
                 </div>
-                <div class="card">
+                <div class="card" data-id="3">
                     <div>
-                        <h3>Workshop: «Слезы и Иски»</h3>
-                        <p>Практические занятия: заполнение искового заявления со следами соленых капель для жалости судьи.</p>
+                        <h3>«Евроремонт Шрёдингера»</h3>
+                        <p>Как убедить покупателя, что дыра в полу — это портал в лофт, а плесень — это элитные французские обои из живого моха.</p>
                     </div>
-                    <span>89 000 ₽</span>
+                    <span>19 990 ₽</span>
+                </div>
+                <div class="card" data-id="4">
+                    <div>
+                        <h3>«Бабушка-Спецназовец»</h3>
+                        <p>Техника внедрения в сделку внезапно воскресшей наследницы, которая просто пришла попить чаю и остаться навсегда.</p>
+                    </div>
+                    <span>45 000 ₽</span>
+                </div>
+                <div class="card" data-id="5">
+                    <div>
+                        <h3>«Золотая Ипотека на Доверии»</h3>
+                        <p>Курс по оформлению кредита на имя соседа по лестничной клетке с использованием его честного взгляда и вашей харизмы.</p>
+                    </div>
+                    <span>999 999 ₽</span>
+                </div>
+                <div class="card" data-id="6">
+                    <div>
+                        <h3>«Вид на Море (из лужи)»</h3>
+                        <p>Искусство расстановки зеркал так, чтобы из окна хрущевки в Бирюлево был виден Лазурный берег (действует до заката).</p>
+                    </div>
+                    <span>15 500 ₽</span>
+                </div>
+                <div class="card" data-id="7">
+                    <div>
+                        <h3>«Сделка с Тенью»</h3>
+                        <p>Учим продавать квартиры в домах, которые еще не построены, не планируются и вообще находятся в параллельной реальности.</p>
+                    </div>
+                    <span>0 ₽ (первый взнос — душа)</span>
+                </div>
+                <div class="card" data-id="8">
+                    <div>
+                        <h3>«Аромат Успеха»</h3>
+                        <p>Как замаскировать запах канализации ароматом свежевыпеченных круассанов и безысходности.</p>
+                    </div>
+                    <span>7 777 ₽</span>
+                </div>
+                <div class="card" data-id="9">
+                    <div>
+                        <h3>«Магия Исчезновения»</h3>
+                        <p>Интенсив по бегу с препятствиями (с чемоданом денег) сразу после выхода из кабинета нотариуса.</p>
+                    </div>
+                    <span>500 000 ₽</span>
+                </div>
+                <div class="card" data-id="10">
+                    <div>
+                        <h3>«Долина Слёз: VIP»</h3>
+                        <p>Личный коучинг: как плакать вместе с покупателем от счастья, зная, что дом снесут завтра утром.</p>
+                    </div>
+                    <span>1 000 001 ₽</span>
                 </div>
             </div>
         </div>
 
         <div id="join" class="section">
             <div class="form">
-                <h2>Записаться на Курс</h2>
-                <form>
-                    <input type="text" placeholder="Ваше имя" required id="name" />
-                    <input type="text" placeholder="Email для инструкций" required id="email" />
-                    <button type="submit" class="btn">Получить Знания</button>
-                </form>
+                <div id="main-form">
+                    <h2>Записаться на Курс</h2>
+                    <div id="choose-course-form" style="text-align:center"><a href="index.html#courses" class="btn">Выберите Курс!</a></div>
+                    <h3 style="display:none;"></h3>
+                    <form style="display:none;">
+                        <input type="text" placeholder="Ваше имя" required id="name" />
+                        <input type="text" placeholder="Email для инструкций" required id="email" />
+                        <button type="submit" class="btn">Получить Знания</button>
+                    </form>
+                </div>
+                <div style="display:none" id="done-message">
+                    <h3>Запись успешно оформлена!</h3>
+                    <img src="images/thumbUp.jpg" />
+                </div>
             </div>
         </div>
     </main>
@@ -80,7 +137,7 @@
             <div>
                 <button class="close" type="button">x</button>
                 <div>
-                    <h2>Спасибо, <span id="input-name">Олег</span>!</h2>
+                    <h2>Спасибо, <span id="input-name"></span>!</h2>
                     <p id="valid-email" style="display:none;">Мы отправили запрос на добавление Вашей почты в базу спам-рассылок.</p>
                     <p id="invalid-email" style="display:none;">Хоть Вы и ввели белеберду вместо почты, мы всё равно рады, что Вы проверили работоспособность этой формы.</p>
                     <div style="text-align:center"><button class="btn" type="button">Ура!</button></div>

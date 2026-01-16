@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI';
+    scroll-behavior: smooth;
 }
 
 /*#region header*/
@@ -144,18 +145,29 @@ main h2 {
 
     .grid .card {
         background-color: white;
-        border: solid 2px black;
+        border: solid 4px black;
         padding: 40px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        box-shadow: 20px 20px 5px grey;
+        cursor: pointer;
+        transition: box-shadow .8s,border-color .3s;
+        height: 240px;
     }
 
-        .grid .card h3 {
-            margin-bottom: 15px;
-            color: red;
-            font-size: 1.5rem;
+        .grid .card.selected {
+            border-color: gold;
+            box-shadow: 20px 20px 5px red;
+        }
+
+            .grid .card.selected:hover {
+                box-shadow: 25px 25px 0px red;
+            }
+
+        .grid .card:hover {
+            box-shadow: 25px 25px 0px gold;
         }
 
         .grid .card span {
@@ -165,12 +177,23 @@ main h2 {
             color: black;
         }
 
+h3 {
+    margin-bottom: 15px;
+    color: red;
+    font-size: 1.5rem;
+}
+
 .form {
     border: solid 4px black;
     border-radius: 20px;
-    box-shadow: 20px 20px 0px grey;
+    box-shadow: 20px 20px 5px grey;
     padding: 60px 40px;
+    text-align: center;
 }
+
+    .form h2 {
+        margin-bottom: 20px;
+    }
 
     .form form {
         display: flex;
@@ -264,5 +287,10 @@ footer {
     font-size: 1.5rem;
     background-color: transparent;
     cursor: pointer;
+    transition: color .3s;
 }
+
+    .close:hover {
+        color: red;
+    }
 /*#endregion*/
