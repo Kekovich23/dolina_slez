@@ -244,6 +244,23 @@ main h2 {
     height: 200px;
 }
 
+.statistic {
+    background-color: black;
+    padding: 65px 30px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+    .statistic h4 {
+        color: gold;
+        font-size: 3rem;
+    }
+
+    .statistic p {
+        color: white;
+    }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
