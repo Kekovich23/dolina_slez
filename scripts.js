@@ -24,6 +24,8 @@ const observer = new IntersectionObserver((entries) => {
             }, 1000);
         }
     });
+}, {
+    rootMargin: '-100px'
 });
 
 const hiddenElements = document.querySelectorAll('.reveal');
